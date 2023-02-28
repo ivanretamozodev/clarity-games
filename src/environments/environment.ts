@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://www.freetogame.com',
+    apiUrl: 'https://free-to-play-games-database.p.rapidapi.com/api',
 };

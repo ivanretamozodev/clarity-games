@@ -1,9 +1,17 @@
+import { GamesSmallResponse } from './../../../core/models/games-small-response.model';
+import { environment } from './../../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map, Observable, retry } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class HomeService {
+    private readonly apiUrl: string = environment.apiUrl;
+    constructor(private readonly httpSvc: HttpClient) {}
 
-  constructor() { }
+    getGames(): Observable<GamesSmallResponse[]> {
+        return this.httpSvc.get<GamesSmallResponse[]>(`${this.apiUrl}/games`).pipe(retry(2));
+    }
 }

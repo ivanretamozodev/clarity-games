@@ -1,1 +1,22 @@
-<router-outlet></router-outlet>
+<div class="main-container">
+    <header class="header header-6">
+        <div class="branding">
+            <h3>Free2Play</h3>
+        </div>
+    </header>
+    <div class="content-container">
+        <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
+            <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
+                <cds-icon shape="home"></cds-icon>
+                Inicio
+            </a>
+            <a clrVerticalNavLink routerLink="/games" routerLinkActive="active">
+                <i class="icon bi bi-joystick"></i>
+                Juegos
+            </a>
+        </clr-vertical-nav>
+        <div class="content-area">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
