@@ -1,0 +1,8 @@
+<section class="container">
+    <h2>{{ title }}</h2>
+    <swiper [config]="config" class="mySwiper">
+        <ng-template class="container" *ngFor="let game of games" swiperSlide>
+            <app-card [game]="game"></app-card>
+        </ng-template>
+    </swiper>
+</section>

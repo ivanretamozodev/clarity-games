@@ -3,11 +3,4 @@
         <app-card class="clr-col-lg-4 clr-col-12" [game]="game"></app-card>
     </ng-container>
 </div> -->
-
-<div class="clr-row">
-    <div>
-        <div class="clr-col-lg-4 clr-col-12" *ngFor="let game of games">
-            <app-card [game]="game"></app-card>
-        </div>
-    </div>
-</div>
+<app-swiper [title]="'bienvenidos'" [games]="games"></app-swiper>
