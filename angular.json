@@ -42,7 +42,12 @@
                                     "maximumError": "4kb"
                                 }
                             ],
-                            "outputHashing": "all"
+                            "outputHashing": "all",
+                            "styles": [
+                                "node_modules/@clr/ui/clr-ui.css",
+                                "node_modules/@clr/icons/clr-icons.min.css",
+                                "src/styles.scss"
+                            ]
                         },
                         "development": {
                             "buildOptimizer": false,

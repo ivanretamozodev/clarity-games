@@ -11,7 +11,9 @@ export class HomeService {
     private readonly apiUrl: string = environment.apiUrl;
     constructor(private readonly httpSvc: HttpClient) {}
 
-    getGames(): Observable<GamesSmallResponse[]> {
-        return this.httpSvc.get<GamesSmallResponse[]>(`${this.apiUrl}/games`).pipe(retry(2));
+    getGamesByTag(tag: string, limit: number = 12): Observable<GamesSmallResponse[]> {
+        return this.httpSvc
+            .get<GamesSmallResponse[]>(`${this.apiUrl}/games?category=${tag}`)
+            .pipe(map((data) => data.slice(0, limit)));
     }
 }
