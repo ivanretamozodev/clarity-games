@@ -1,8 +1,17 @@
-<div class="card clickable width">
+<div class="card width">
     <div class="card-img">
         <img [src]="game.thumbnail" />
     </div>
     <div class="card-block">
         <h5 class="card-text">{{ game.title }}</h5>
+    </div>
+
+    <div class="card-footer">
+        <div class="clr-row">
+            <button type="button" class="btn btn-regular btn-icon" aria-label="home">
+                <i class="bi bi-heart"></i>
+            </button>
+            <a [routerLink]="['/game', game.id]" class="btn btn-primary">Details</a>
+        </div>
     </div>
 </div>

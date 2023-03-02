@@ -5,13 +5,13 @@
             <router-outlet></router-outlet>
         </main>
         <clr-vertical-nav [clr-nav-level]="1">
-            <a clrVerticalNavLink routerLink="./home" routerLinkActive="active">inicio</a>
-            <a clrVerticalNavLink routerLink="/games" routerLinkActive="active">juegos</a>
-            <a clrVerticalNavLink routerLink="./pikachu" routerLinkActive="active">favoritos</a>
-            <a clrVerticalNavLink routerLink="./raichu" routerLinkActive="active">acerca de</a>
+            <a clrVerticalNavLink routerLink="home" routerLinkActive="active">Home</a>
+            <a clrVerticalNavLink routerLink="/games" routerLinkActive="active">Games</a>
+            <a clrVerticalNavLink routerLink="/favorites" routerLinkActive="active">Favorites</a>
+            <a clrVerticalNavLink routerLink="/help" routerLinkActive="active">About Us</a>
             <div class="nav-divider"></div>
-            <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">iniciar sesion</a>
-            <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">registrarse</a>
+            <a clrVerticalNavLink routerLink="/auth/login" routerLinkActive="active">Sign in</a>
+            <a clrVerticalNavLink routerLink="/auth/register" routerLinkActive="active">Sign Up</a>
         </clr-vertical-nav>
     </div>
 </clr-main-container>

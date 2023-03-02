@@ -1,0 +1,20 @@
+<div class="slider">
+    <ng-container *ngFor="let game of games; let i = index">
+        <div class="slide" *ngIf="i === currentIndex" @fade>
+            <div class="slide">
+                <div class="slide-bg">
+                    <img class="slide-bg-image" [src]="game.thumbnail" alt="" />
+                </div>
+                <div class="slide-pane">
+                    <h2 class="name">{{ game.title }}</h2>
+                    <div class="meta">
+                        <div class="info">
+                            <span>{{ game.publisher }}</span>
+                            <span>{{ game.release_date | date : 'yyyy' }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
