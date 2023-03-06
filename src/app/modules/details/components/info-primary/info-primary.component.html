@@ -1,0 +1,18 @@
+<div *ngIf="gameDetails" class="info-primary">
+    <div class="info-primary__title">
+        <h3>{{ gameDetails.title }} | {{ gameDetails.release_date | date : 'yyyy' }}</h3>
+    </div>
+    <div class="info-primary__tags">
+        <span class="label">{{ gameDetails.publisher }} </span>
+        <span class="label">{{ gameDetails.platform }} </span>
+        <span class="label">{{ gameDetails.genre }} </span>
+    </div>
+    <div class="info-primary__description">
+        <p>{{ gameDetails.description }}</p>
+    </div>
+    <div class="info-primary__buttons">
+        <a target="_blank" class="btn btn-secondary">back</a>
+
+        <a [href]="gameDetails.game_url" target="_blank" class="btn btn-primary">view game</a>
+    </div>
+</div>

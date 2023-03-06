@@ -10,14 +10,6 @@
         <img [src]="image.image" />
     </ng-template>
 </swiper>
-<swiper
-    (swiper)="thumbsSwiper = $event"
-    [loop]="true"
-    [spaceBetween]="10"
-    [slidesPerView]="5"
-    [freeMode]="true"
-    [watchSlidesProgress]="true"
-    class="mySwiper"
->
+<swiper (swiper)="thumbsSwiper = $event" [config]="config" class="mySwiper">
     <ng-template swiperSlide *ngFor="let image of images"><img [src]="image.image" /></ng-template>
 </swiper>
