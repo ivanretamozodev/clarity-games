@@ -1,4 +1,11 @@
-<swiper [loop]="true" [spaceBetween]="10" [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+<swiper
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+    [loop]="true"
+    [spaceBetween]="10"
+    [navigation]="true"
+    [thumbs]="{ swiper: thumbsSwiper }"
+    class="mySwiper2"
+>
     <ng-template swiperSlide *ngFor="let image of images">
         <img [src]="image.image" />
     </ng-template>
@@ -7,7 +14,7 @@
     (swiper)="thumbsSwiper = $event"
     [loop]="true"
     [spaceBetween]="10"
-    [slidesPerView]="10"
+    [slidesPerView]="5"
     [freeMode]="true"
     [watchSlidesProgress]="true"
     class="mySwiper"

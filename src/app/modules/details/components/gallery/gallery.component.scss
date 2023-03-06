@@ -1,7 +1,3 @@
-/* @import '~swiper/css';
-@import '~swiper/css/free-mode';
-@import '~swiper/css/navigation';
-@import '~swiper/css/thumbs'; */
 @import '/node_modules/swiper/swiper-bundle.min.css';
 .swiper-slide {
     text-align: center;
@@ -52,9 +48,12 @@
     box-sizing: border-box;
     padding: 10px 0;
 }
+.mySwiper img {
+    width: 100%;
+}
 
 .mySwiper .swiper-slide {
-    width: 25%;
+    width: 100%;
     height: 100%;
     opacity: 0.4;
 }
@@ -65,7 +64,7 @@
 
 .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     object-fit: cover;
 }
