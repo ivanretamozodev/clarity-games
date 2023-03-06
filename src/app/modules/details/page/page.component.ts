@@ -1,5 +1,5 @@
 import { observable, Subscription } from 'rxjs';
-import { GamesDetailResponse } from './../../../core/models/game.details.response.interface';
+import { GamesDetailResponse, Screenshot } from './../../../core/models/game.details.response.interface';
 import { DetailsGameService } from './../services/details-game.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PageComponent implements OnInit, OnDestroy {
     gameId: string = '';
     gameDetails!: GamesDetailResponse | null;
+    screenshots: Screenshot[] = [];
     listObservables$: Subscription[] = [];
     constructor(
         private readonly _detailsGameSvc: DetailsGameService,
@@ -28,9 +29,10 @@ export class PageComponent implements OnInit, OnDestroy {
     }
 
     getGameDetails(id: string): void {
-        const observer1$: Subscription = this._detailsGameSvc
-            .getGameDetails(id)
-            .subscribe((data) => (this.gameDetails = data));
+        const observer1$: Subscription = this._detailsGameSvc.getGameDetails(id).subscribe((data) => {
+            this.gameDetails = data;
+            this.screenshots = data.screenshots;
+        });
         this.listObservables$.push(observer1$);
     }
 

@@ -3,7 +3,7 @@
         <div class="slide" *ngIf="i === currentIndex" @fade>
             <div class="slide">
                 <div class="slide-bg">
-                    <img class="slide-bg-image" [src]="game.thumbnail" alt="" />
+                    <img class="slide-bg-image" [src]="game.thumbnail" [alt]="game.title" />
                 </div>
                 <div class="slide-pane">
                     <h2 class="name">{{ game.title }}</h2>

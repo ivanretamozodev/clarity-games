@@ -13,7 +13,7 @@ export class SwiperComponent {
     config: SwiperOptions = {
         slidesPerView: 1.9,
         spaceBetween: 5,
-        navigation: true,
+        navigation: false,
         breakpoints: {
             '320': {
                 slidesPerView: 1.1,
@@ -64,6 +64,5 @@ export class SwiperComponent {
                 spaceBetween: 5,
             },
         },
-        pagination: { clickable: true },
     };
 }
