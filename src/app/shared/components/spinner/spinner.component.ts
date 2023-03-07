@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
                 justify-content: center;
                 align-items: center;
                 z-index: 5;
-                background-color: #1b2a32;
+                background-color: #0e0e10;
             }
         `,
     ],

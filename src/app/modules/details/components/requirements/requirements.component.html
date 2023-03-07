@@ -1,0 +1,60 @@
+<ng-container *ngIf="gameRequirements">
+    <div class="clr-row">
+        <div class="requirements clr-col-sm-12 clr-col-md-6">
+            <div class="requirements__icon">
+                <i class="bi bi-app-indicator"></i>
+            </div>
+            <div class="requirements__description">
+                <h3 class="requirements__description-title">Operating System:</h3>
+                <h4 class="requirements__description-info">{{ gameRequirements.os }}</h4>
+            </div>
+        </div>
+        <div class="requirements clr-col-sm-12 clr-col-md-6">
+            <div class="requirements__icon">
+                <i class="bi bi-cpu"></i>
+            </div>
+            <div class="requirements__description">
+                <h3 class="requirements__description-title">Processor:</h3>
+                <h4 class="requirements__description-info">{{ gameRequirements.processor }}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="clr-row">
+        <div class="requirements clr-col-sm-12 clr-col-md-6">
+            <div class="requirements__icon">
+                <i class="bi bi-memory"></i>
+            </div>
+            <div class="requirements__description">
+                <h3 class="requirements__description-title">Memory:</h3>
+                <h4 class="requirements__description-info">{{ gameRequirements.memory }}</h4>
+            </div>
+        </div>
+        <div class="requirements clr-col-sm-12 clr-col-md-6">
+            <div class="requirements__icon">
+                <i class="bi bi-gpu-card"></i>
+            </div>
+            <div class="requirements__description">
+                <h3 class="requirements__description-title">graphics:</h3>
+                <h4 class="requirements__description-info">{{ gameRequirements.graphics }}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="clr-row">
+        <div class="requirements clr-col-sm-12 clr-col-md-6">
+            <div class="requirements__icon">
+                <i class="bi bi-hdd"></i>
+            </div>
+            <div class="requirements__description">
+                <h3 class="requirements__description-title">storage:</h3>
+                <h4 class="requirements__description-info">{{ gameRequirements.storage }}</h4>
+            </div>
+        </div>
+        <div class="requirements clr-col-sm-12 clr-col-md-6">
+            <div class="requirements__icon"></div>
+            <div class="requirements__description">
+                <h3 class="requirements__description-title"></h3>
+                <h4 class="requirements__description-info"></h4>
+            </div>
+        </div>
+    </div>
+</ng-container>

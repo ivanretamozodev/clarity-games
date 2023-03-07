@@ -1,0 +1,23 @@
+.requirements {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    &__icon {
+        i {
+            font-size: 32px;
+        }
+    }
+    &__description {
+        &-title {
+            padding: 0;
+            margin: 0;
+            font-size: 0.7rem;
+        }
+        &-info {
+            padding: 0;
+            margin: 0;
+            font-size: 0.7rem;
+        }
+    }
+}

@@ -25,7 +25,14 @@
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "styles": ["src/styles.scss"],
+                        "styles": [
+                            "node_modules/@clr/ui/clr-ui-dark.min.css",
+                            "src/styles.scss",
+                            {
+                                "input": "src/styles/_colors.scss",
+                                "bundleName": "colors"
+                            }
+                        ],
                         "scripts": []
                     },
                     "configurations": {
@@ -55,8 +62,7 @@
                             "vendorChunk": true,
                             "extractLicenses": false,
                             "sourceMap": true,
-                            "namedChunks": true,
-                            "styles": ["node_modules/@clr/ui/clr-ui-dark.min.css"]
+                            "namedChunks": true
                         }
                     },
                     "defaultConfiguration": "production"

@@ -12,6 +12,7 @@
                             <span>{{ game.publisher }}</span>
                             <span>{{ game.release_date | date : 'yyyy' }}</span>
                         </div>
+                        <a [routerLink]="['/game', game.id]" class="btn btn-primary">details</a>
                     </div>
                 </div>
             </div>

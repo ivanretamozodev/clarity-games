@@ -1,0 +1,32 @@
+$primary-color: #9147ff;
+$dark-color: #0e0e10;
+$grey-color: #18181b;
+$light-grey-color: #303035c9;
+$white-color: #efeff1;
+$clr-global-app-background: $dark-color;
+$clr-global-font-color: $white-color;
+
+//header
+$clr-header-bgColor: $grey-color;
+//vertical nav
+$clr-vertical-nav-bg-color: $grey-color;
+$clr-vertical-nav-bg-color: $grey-color;
+$clr-vertical-nav-item-active-color: $white-color;
+$clr-vertical-nav-active-bg-color: $light-grey-color;
+
+//card
+$clr-card-bg-color: $dark-color;
+
+//button
+$clr-btn-primary-color: $white-color;
+$clr-btn-primary-border-color: $white-color;
+$clr-btn-primary-bg-color: $primary-color;
+$clr-btn-primary-border-color: $primary-color;
+$clr-btn-primary-hover-bg-color: lighten($primary-color, 3%);
+$clr-btn-primary-hover-color: lighten($white-color, 3%);
+
+$clr-btn-default-outline-color: $primary-color;
+$clr-btn-default-outline-hover-bg-color: lighten($grey-color, 3%);
+$clr-btn-default-outline-hover-color: lighten($primary-color, 3%);
+
+//link

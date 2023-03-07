@@ -1,18 +1,43 @@
 <clr-main-container>
-    <clr-header> </clr-header>
+    <clr-header>
+        <h4 class="branding">Free2Play</h4>
+        <div class="header-actions">
+            <a href="javascript://" class="nav-link nav-icon" aria-label="settings">
+                <i class="bi bi-gear-fill"></i>
+            </a>
+        </div>
+    </clr-header>
     <div class="content-container">
         <main class="content-area">
             <app-spinner *ngIf="spinnerSvc.spinnerStatus$ | async"></app-spinner>
             <router-outlet></router-outlet>
         </main>
         <clr-vertical-nav [clr-nav-level]="1">
-            <a clrVerticalNavLink routerLink="home" routerLinkActive="active">Home</a>
-            <a clrVerticalNavLink routerLink="/games" routerLinkActive="active">Games</a>
-            <a clrVerticalNavLink routerLink="/favorites" routerLinkActive="active">Favorites</a>
-            <a clrVerticalNavLink routerLink="/help" routerLinkActive="active">About Us</a>
+            <a clrVerticalNavLink routerLink="home" routerLinkActive="active">
+                <i class="bi bi-house-door"></i>
+                Home</a
+            >
+            <a clrVerticalNavLink routerLink="/games" routerLinkActive="active">
+                <i class="bi bi-controller"></i>
+                Games</a
+            >
+            <a clrVerticalNavLink routerLink="/favorites" routerLinkActive="active">
+                <i class="bi bi-save"></i>
+                Favorites</a
+            >
+            <a clrVerticalNavLink routerLink="/help" routerLinkActive="active">
+                <i class="bi bi-info-circle"></i>
+                About Us</a
+            >
             <div class="nav-divider"></div>
-            <a clrVerticalNavLink routerLink="/auth/login" routerLinkActive="active">Sign in</a>
-            <a clrVerticalNavLink routerLink="/auth/register" routerLinkActive="active">Sign Up</a>
+            <a clrVerticalNavLink routerLink="/auth/login" routerLinkActive="active">
+                <i class="bi bi-box-arrow-right"></i>
+                Sign in</a
+            >
+            <a clrVerticalNavLink routerLink="/auth/register" routerLinkActive="active">
+                <i class="bi bi-box-arrow-right"></i>
+                Sign Up</a
+            >
         </clr-vertical-nav>
     </div>
 </clr-main-container>

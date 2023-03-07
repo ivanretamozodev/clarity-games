@@ -7,12 +7,13 @@
         <span class="label">{{ gameDetails.platform }} </span>
         <span class="label">{{ gameDetails.genre }} </span>
     </div>
+
     <div class="info-primary__description">
         <p>{{ gameDetails.description }}</p>
     </div>
-    <div class="info-primary__buttons">
-        <a target="_blank" class="btn btn-secondary">back</a>
 
+    <div class="info-primary__buttons">
+        <a target="_blank" class="btn btn-outline">back</a>
         <a [href]="gameDetails.game_url" target="_blank" class="btn btn-primary">view game</a>
     </div>
 </div>

@@ -1,9 +1,7 @@
 import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
 import '@cds/core/icon/register.js';
-import { ClarityIcons, userIcon } from '@cds/core/icon';
-import { SpinnerService } from './shared/components/spinner/spinner.service';
 
-ClarityIcons.addIcons(userIcon);
+import { SpinnerService } from './shared/components/spinner/spinner.service';
 
 @Component({
     selector: 'app-root',

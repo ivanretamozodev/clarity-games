@@ -1,4 +1,13 @@
 .container {
     display: flex;
     align-items: center;
+    padding: 0.5rem;
+}
+.requirements {
+    padding: 0.5rem;
+    h2 {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
 }
