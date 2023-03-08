@@ -2,9 +2,9 @@
     <div class="info-primary__thumbnail">
         <img [src]="gameDetails.thumbnail" [alt]="gameDetails.title" />
     </div>
-    <div class="info-primary__title">
-        <h3>{{ gameDetails.title }} | {{ gameDetails.release_date | date : 'yyyy' }}</h3>
-    </div>
+
+    <h3 class="info-primary__title">{{ gameDetails.title }} | {{ gameDetails.release_date | date : 'yyyy' }}</h3>
+
     <div class="info-primary__tags">
         <span class="label">{{ gameDetails.publisher }} </span>
         <span class="label">{{ gameDetails.platform }} </span>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="info-primary__buttons">
-        <a target="_blank" class="btn btn-outline">back</a>
+        <a (click)="backClick()" target="_blank" class="btn btn-outline">back</a>
         <a [href]="gameDetails.game_url" target="_blank" class="btn btn-primary">view game</a>
     </div>
 </div>

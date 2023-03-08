@@ -1,9 +1,9 @@
 <div class="clr-row container">
-    <div class="clr-col-sm-12 clr-col-md-6">
+    <div class="clr-col-sm-12 clr-col-md-7 clr-col-lg-7">
         <app-gallery [images]="screenshots"></app-gallery>
     </div>
-    <div class="clr-col-sm-12 clr-col-md-6">
-        <app-info-primary [gameDetails]="gameDetails"></app-info-primary>
+    <div class="clr-col-sm-12 clr-col-md-5 clr-col-lg-5">
+        <app-info-primary (goBack)="onGoBack()" [gameDetails]="gameDetails"></app-info-primary>
     </div>
 </div>
 <div class="requirements">

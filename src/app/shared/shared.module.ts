@@ -6,9 +6,10 @@ import { ClarityModule } from '@clr/angular';
 import { CardComponent } from './components/card/card.component';
 import { SwiperModule } from 'swiper/angular';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MaxCharactersPipe } from './pipes/max-characters.pipe';
 
 @NgModule({
-    declarations: [CardComponent, SwiperComponent, SpinnerComponent],
+    declarations: [CardComponent, SwiperComponent, SpinnerComponent, MaxCharactersPipe],
     imports: [CommonModule, RouterModule, ClarityModule, SwiperModule],
     exports: [CardComponent, SwiperComponent, SpinnerComponent],
 })

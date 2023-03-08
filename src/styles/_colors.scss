@@ -29,4 +29,10 @@ $clr-btn-default-outline-color: $primary-color;
 $clr-btn-default-outline-hover-bg-color: lighten($grey-color, 3%);
 $clr-btn-default-outline-hover-color: lighten($primary-color, 3%);
 
-//link
+//reset padding
+$clr-content-area-padding-top: 0.6rem;
+$clr-content-area-padding-right: 0.6rem;
+$clr-content-area-padding-bottom: 0.6rem;
+$clr-content-area-padding-left: 0.6rem;
+
+$clr-global-typography-margin-top: 0rem;

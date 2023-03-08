@@ -3,7 +3,7 @@
         <img [src]="game.thumbnail" />
     </div>
     <div class="card-block">
-        <h5 class="card-text">{{ game.title }}</h5>
+        <h5 class="card-text">{{ game.title | maxCharacters }}</h5>
     </div>
 
     <div class="card-footer">

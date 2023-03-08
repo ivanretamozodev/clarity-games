@@ -42,6 +42,10 @@ export class PageComponent implements OnInit, OnDestroy {
         this.listObservables$.push(observer1$);
     }
 
+    onGoBack() {
+        this._detailsGameSvc.goBack();
+    }
+
     ngOnDestroy(): void {
         this.listObservables$.forEach((observable) => observable.unsubscribe());
     }

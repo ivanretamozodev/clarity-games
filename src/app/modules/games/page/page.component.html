@@ -1,1 +1,13 @@
-<p>games page works!</p>
+<div class="container">
+    <app-card
+        *ngFor="let game of allGames | paginate : { itemsPerPage: 10, currentPage: page }"
+        [game]="game"
+    ></app-card>
+</div>
+<div class="pagination">
+    <pagination-controls
+        [responsive]="true"
+        class="pagination__controls"
+        (pageChange)="page = $event"
+    ></pagination-controls>
+</div>
