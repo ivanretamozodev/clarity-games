@@ -38,6 +38,7 @@ export class PageComponent implements OnInit, OnDestroy {
             this.gameDetails = data;
             this.screenshots = data.screenshots;
             this.systemRequirements = data.minimum_system_requirements;
+            console.log(data.minimum_system_requirements);
         });
         this.listObservables$.push(observer1$);
     }

@@ -6,7 +6,7 @@
         <app-info-primary (goBack)="onGoBack()" [gameDetails]="gameDetails"></app-info-primary>
     </div>
 </div>
-<div class="requirements">
+<div class="requirements" *ngIf="systemRequirements?.os">
     <h2>Minimum Requirements:</h2>
     <app-requirements [gameRequirements]="systemRequirements"></app-requirements>
 </div>

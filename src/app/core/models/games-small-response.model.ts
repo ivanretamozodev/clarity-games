@@ -10,6 +10,7 @@ export interface GamesSmallResponse {
     developer: string;
     release_date: string;
     freetogame_profile_url: string;
+    favorite?: boolean;
 }
 
 export enum Genre {

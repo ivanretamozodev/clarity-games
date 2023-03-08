@@ -8,8 +8,10 @@
 
     <div class="card-footer">
         <div class="clr-row">
-            <a class="btn btn-outline btn-icon">
-                <i class="bi bi-heart"></i>
+            <a (click)="addToFavorites(game.id)" class="btn btn-outline btn-icon">
+                <i
+                    [ngClass]="{ 'bi bi-heart-fill': isGameFavorite(game.id), 'bi bi-heart': !isGameFavorite(game.id) }"
+                ></i>
             </a>
             <a [routerLink]="['/game', game.id]" class="btn btn-primary">Details</a>
         </div>
