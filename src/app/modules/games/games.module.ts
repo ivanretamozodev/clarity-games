@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { GamesRoutingModule } from './games-routing.module';
 import { PageComponent } from './page/page.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import { FiltersComponent } from './components/filters/filters.component';
 
 @NgModule({
-    declarations: [PageComponent],
-    imports: [CommonModule, GamesRoutingModule, NgxPaginationModule, SharedModule],
+    declarations: [PageComponent, FiltersComponent],
+    imports: [CommonModule, GamesRoutingModule, FormsModule, SharedModule],
 })
 export class GamesModule {}

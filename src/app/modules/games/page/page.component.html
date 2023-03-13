@@ -1,13 +1,12 @@
-<div class="container">
-    <app-card
-        *ngFor="let game of allGames | paginate : { itemsPerPage: 10, currentPage: page }"
-        [game]="game"
-    ></app-card>
-</div>
-<div class="pagination">
-    <pagination-controls
-        [responsive]="true"
-        class="pagination__controls"
-        (pageChange)="page = $event"
-    ></pagination-controls>
+<div>
+    <div>
+        <app-filters [categories]="categories"></app-filters>
+    </div>
+    <div class="container">
+        <app-card *ngFor="let game of allGames | pagination : page" [game]="game"></app-card>
+    </div>
+    <div class="btn-container">
+        <button (click)="prevPage()" class="btn btn-outline">Previous</button>
+        <button (click)="nextPage()" class="btn btn-primary">Next</button>
+    </div>
 </div>

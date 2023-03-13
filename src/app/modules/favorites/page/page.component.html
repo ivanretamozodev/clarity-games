@@ -1,1 +1,11 @@
-<p>page works!</p>
+<div [ngSwitch]="favoriteGames.length">
+    <div *ngSwitchCase="0">
+        <h2 *ngIf="favoriteGames.length === 0">you haven't added games yet.😥</h2>
+    </div>
+    <div *ngSwitchDefault>
+        <h2>Here are your favorite´s games.😎</h2>
+        <div class="cards">
+            <app-card *ngFor="let game of favoriteGames" [game]="game"></app-card>
+        </div>
+    </div>
+</div>

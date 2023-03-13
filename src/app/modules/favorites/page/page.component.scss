@@ -1,0 +1,11 @@
+h2 {
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}

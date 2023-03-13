@@ -1,3 +1,4 @@
+import { PaginationPipe } from './pipes/pagination.pipe';
 import { RouterModule } from '@angular/router';
 import { SwiperComponent } from './components/swiper/swiper.component';
 import { NgModule } from '@angular/core';
@@ -9,8 +10,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MaxCharactersPipe } from './pipes/max-characters.pipe';
 
 @NgModule({
-    declarations: [CardComponent, SwiperComponent, SpinnerComponent, MaxCharactersPipe],
+    declarations: [CardComponent, SwiperComponent, SpinnerComponent, MaxCharactersPipe, PaginationPipe],
     imports: [CommonModule, RouterModule, ClarityModule, SwiperModule],
-    exports: [CardComponent, SwiperComponent, SpinnerComponent],
+    exports: [CardComponent, SwiperComponent, SpinnerComponent, PaginationPipe],
 })
 export class SharedModule {}

@@ -5,34 +5,9 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-.pagination {
+
+.btn-container {
+    margin-top: 0.5rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-
-    ::ng-deep .ngx-pagination .current {
-        background: $primary-color;
-    }
-
-    .pagination__controls::ng-deep .ngx-pagination li a,
-    :host ::ng-deep .ngx-pagination li span button {
-        border: $primary-color;
-        background-color: $dark-color;
-        color: $white-color;
-        margin: 0 5px;
-        padding: 5px 10px;
-
-        &:hover {
-            background-color: $primary-color;
-            color: $white-color;
-        }
-
-        &.disabled {
-            color: #a9a9a9;
-            cursor: not-allowed;
-        }
-    }
-
-    /* Estilos para todos los botones */
 }
