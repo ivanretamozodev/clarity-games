@@ -17,7 +17,9 @@ export class GameService {
 
     getAllGamesFiltered(plattform: string, category: string, sort: string): Observable<GamesSmallResponse[]> {
         return this._httpSvc.get<GamesSmallResponse[]>(
-            `${this.apiUrl}/games?platform=${plattform ? plattform : 'pc'}&category=${category}&sort-by=${sort}`
+            `${this.apiUrl}/games?platform=${plattform ? plattform : 'pc'}&category=${
+                category ? category : 'mmorpg'
+            }&sort-by=${sort ? sort : 'popularity'}`
         );
     }
 }
