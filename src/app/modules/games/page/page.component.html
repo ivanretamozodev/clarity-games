@@ -1,6 +1,10 @@
 <div>
     <div>
-        <app-filters [categories]="categories"></app-filters>
+        <app-filters
+            (onCategoryChange)="categoryChange($event)"
+            (onSortChange)="sortChange($event)"
+            (onPlatformChange)="plattformChange($event)"
+        ></app-filters>
     </div>
     <div class="container">
         <app-card *ngFor="let game of allGames | pagination : page" [game]="game"></app-card>

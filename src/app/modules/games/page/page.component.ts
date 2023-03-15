@@ -1,7 +1,6 @@
-import { GameService } from './../services/game.service';
 import { Component, OnInit } from '@angular/core';
 import { GamesSmallResponse } from 'src/app/core/models/games-small-response.model';
-import { CATEGORY_SELECTS } from 'src/app/core/mocks/selects.mocks';
+import { GameService } from './../services/game.service';
 
 @Component({
     selector: 'app-page',
@@ -9,23 +8,42 @@ import { CATEGORY_SELECTS } from 'src/app/core/mocks/selects.mocks';
     styleUrls: ['./page.component.scss'],
 })
 export class PageComponent implements OnInit {
-    categories: string[] = CATEGORY_SELECTS;
     allGames: GamesSmallResponse[] = [];
     options: string = '';
     page: number = 0;
     constructor(private readonly gameSvc: GameService) {}
+    category: string = '';
+    sort: string = '';
+    plattform: string = '';
 
     ngOnInit(): void {
         this.getGames();
-        console.log(this.options);
     }
 
     getGames() {
         this.gameSvc.getAllGames().subscribe((data) => (this.allGames = data));
     }
-    onCategoryChange() {}
-    onSortChange() {}
-    onPlattformChange() {}
+    categoryChange(category: string) {
+        this.page = 0;
+        this.category = category;
+        this.gameSvc
+            .getAllGamesFiltered(this.plattform, category, this.sort)
+            .subscribe((games) => (this.allGames = games));
+    }
+    sortChange(sort: string) {
+        this.page = 0;
+        this.sort = sort;
+        this.gameSvc
+            .getAllGamesFiltered(this.plattform, this.category, sort)
+            .subscribe((games) => (this.allGames = games));
+    }
+    plattformChange(plattform: string) {
+        this.page = 0;
+        this.plattform = plattform;
+        this.gameSvc
+            .getAllGamesFiltered(plattform, this.category, this.sort)
+            .subscribe((games) => (this.allGames = games));
+    }
 
     nextPage() {
         this.page += 5;

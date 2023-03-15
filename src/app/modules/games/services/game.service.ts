@@ -17,7 +17,7 @@ export class GameService {
 
     getAllGamesFiltered(plattform: string, category: string, sort: string): Observable<GamesSmallResponse[]> {
         return this._httpSvc.get<GamesSmallResponse[]>(
-            `https://www.freetogame.com/api/games?platform=${plattform}&category=${category}&sort-by=${sort}`
+            `${this.apiUrl}/games?platform=${plattform ? plattform : 'pc'}&category=${category}&sort-by=${sort}`
         );
     }
 }
